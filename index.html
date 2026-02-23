@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Application Tracker</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Job Application Tracker</h1>
+
+  <!-- Dashboard -->
+  <section class="dashboard">
+    <div class="dash applied">
+      <p>Applied</p>
+      <h2 id="allCount">0</h2>
+    </div>
+
+    <div class="dash interview">
+      <p>Interview</p>
+      <h2 id="interviewCount">0</h2>
+    </div>
+
+    <div class="dash rejected">
+      <p>Rejected</p>
+      <h2 id="rejectedCount">0</h2>
+    </div>
+  </section>
+
+  <!-- Jobs Section -->
+  <section class="jobs">
+
+    <div class="jobs-header">
+      <h2>Available Jobs</h2>
+      <span id="tabCount"></span>
+    </div>
+
+    <div class="tabs">
+      <button class="active" onclick="switchTab('all', this)">All</button>
+      <button onclick="switchTab('interview', this)">Interview</button>
+      <button onclick="switchTab('rejected', this)">Rejected</button>
+    </div>
+
+    <div id="jobContainer" class="job-container"></div>
+
+    <div id="emptyState" class="empty hidden">
+      <img src="jobs.png">
+      <h3>No jobs available</h3>
+      <p>There are no jobs in this section right now</p>
+    </div>
+
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
