@@ -10,6 +10,10 @@ body{
   padding:20px;
 }
 
+h1{
+  margin-bottom:20px;
+}
+
 .dashboard{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -21,7 +25,6 @@ body{
   padding:20px;
   border-radius:14px;
   color:white;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .applied{ background:linear-gradient(135deg,#6366f1,#4f46e5); }
@@ -71,6 +74,8 @@ body{
 }
 
 .badge{
+  display:inline-block;
+  margin-top:8px;
   padding:4px 10px;
   border-radius:20px;
   font-size:12px;
@@ -99,9 +104,14 @@ body{
   animation:fade .4s ease;
 }
 
+.empty-img{
+  width:90px;
+  margin-bottom:10px;
+}
+
+.hidden{display:none;}
+
 @keyframes fade{
   from{opacity:0; transform:translateY(10px);}
   to{opacity:1;}
 }
-
-.hidden{display:none;}
