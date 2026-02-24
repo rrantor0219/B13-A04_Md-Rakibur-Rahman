@@ -1,111 +1,126 @@
-/* basic reset */
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f3f4f6;
-  padding: 20px;
+  background:#f3f4f6;
+  padding:20px;
 }
 
-/* dashboard area */
 .dashboard{
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-bottom: 25px;
+  max-width:1000px;
+  margin:auto;
+  margin-bottom:25px;
 }
 
-.dashboard h1{
-  margin-bottom: 15px;
-}
-
-/* stat cards */
 .stats{
-  display: flex;
-  gap: 12px;
+  display:flex;
+  gap:12px;
+  margin-top:15px;
 }
 
 .card{
-  background: #ffffff;
-  flex: 1;
-  padding: 18px;
-  border-radius: 8px;
-  text-align: center;
+  background:#fff;
+  flex:1;
+  padding:18px;
+  border-radius:8px;
+  text-align:center;
 }
 
-.card h3{
-  font-size: 15px;
-  color: gray;
-  margin-bottom: 8px;
-}
-
-.card p{
-  font-size: 22px;
-  font-weight: bold;
-}
-
-/* job section */
 .jobs-section{
-  max-width: 1000px;
-  margin: auto;
-  background: #fff;
-  padding: 18px;
-  border-radius: 8px;
+  max-width:1000px;
+  margin:auto;
+  background:#fff;
+  padding:18px;
+  border-radius:8px;
 }
 
-/* job header */
 .jobs-header{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
 }
 
-/* tabs */
 .tabs{
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-bottom:15px;
 }
 
 .tab{
-  border: none;
-  background: #e5e7eb;
-  padding: 7px 14px;
-  margin-right: 6px;
-  border-radius: 5px;
-  cursor: pointer;
+  border:none;
+  background:#e5e7eb;
+  padding:7px 14px;
+  margin-right:6px;
+  border-radius:5px;
+  cursor:pointer;
 }
 
 .tab.active{
-  background: #2563eb;
-  color: white;
+  background:#2563eb;
+  color:#fff;
 }
 
-/* job container */
 .job-list{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 12px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
 }
 
-/* empty message */
+.job-card{
+  border:1px solid #e5e7eb;
+  padding:15px;
+  border-radius:8px;
+  background:#fafafa;
+}
+
+.badge{
+  display:inline-block;
+  padding:3px 8px;
+  border-radius:5px;
+  font-size:12px;
+  margin-bottom:6px;
+}
+
+.badge.interview{ background:#22c55e; color:#fff; }
+.badge.rejected{ background:#ef4444; color:#fff; }
+
+.btn-group{
+  margin-top:10px;
+}
+
+.btn-group button{
+  border:none;
+  padding:6px 10px;
+  margin-right:5px;
+  border-radius:4px;
+  cursor:pointer;
+  color:#fff;
+}
+
+.interview-btn{ background:#22c55e; }
+.rejected-btn{ background:#ef4444; }
+.delete-btn{ background:#6b7280; }
+
 .empty{
-  text-align: center;
-  padding: 30px;
-  color: #6b7280;
+  text-align:center;
+  padding:40px 0;
+  color:#6b7280;
+  display:none;
 }
 
-/* mobile responsive */
+.empty-icon{
+  font-size:40px;
+  margin-bottom:10px;
+}
+.empty-img{
+  width:80px;
+  margin-bottom:10px;
+  opacity:0.8;
+}
+
 @media(max-width:768px){
-
-  .stats{
-    flex-direction: column;
-  }
-
-  .job-list{
-    grid-template-columns: 1fr;
-  }
-
+  .stats{flex-direction:column;}
+  .job-list{grid-template-columns:1fr;}
 }
