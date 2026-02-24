@@ -1,0 +1,111 @@
+/* basic reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f4f6;
+  padding: 20px;
+}
+
+/* dashboard area */
+.dashboard{
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.dashboard h1{
+  margin-bottom: 15px;
+}
+
+/* stat cards */
+.stats{
+  display: flex;
+  gap: 12px;
+}
+
+.card{
+  background: #ffffff;
+  flex: 1;
+  padding: 18px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card h3{
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+.card p{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* job section */
+.jobs-section{
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 18px;
+  border-radius: 8px;
+}
+
+/* job header */
+.jobs-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* tabs */
+.tabs{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.tab{
+  border: none;
+  background: #e5e7eb;
+  padding: 7px 14px;
+  margin-right: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tab.active{
+  background: #2563eb;
+  color: white;
+}
+
+/* job container */
+.job-list{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
+}
+
+/* empty message */
+.empty{
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
+
+/* mobile responsive */
+@media(max-width:768px){
+
+  .stats{
+    flex-direction: column;
+  }
+
+  .job-list{
+    grid-template-columns: 1fr;
+  }
+
+}
