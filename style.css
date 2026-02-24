@@ -10,10 +10,6 @@ body{
   padding:20px;
 }
 
-h1{
-  margin-bottom:20px;
-}
-
 .dashboard{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -73,6 +69,27 @@ h1{
   transform:translateY(-5px);
 }
 
+.company{
+  font-weight:600;
+  color:#475569;
+}
+
+.salary{
+  font-weight:bold;
+  margin:5px 0;
+}
+
+.desc{
+  font-size:14px;
+  color:#64748b;
+  margin-top:8px;
+
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
 .badge{
   display:inline-block;
   margin-top:8px;
@@ -101,7 +118,6 @@ h1{
 .empty{
   text-align:center;
   margin-top:40px;
-  animation:fade .4s ease;
 }
 
 .empty-img{
@@ -110,8 +126,3 @@ h1{
 }
 
 .hidden{display:none;}
-
-@keyframes fade{
-  from{opacity:0; transform:translateY(10px);}
-  to{opacity:1;}
-}

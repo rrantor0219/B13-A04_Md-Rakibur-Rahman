@@ -1,12 +1,12 @@
 let jobs = JSON.parse(localStorage.getItem("jobs")) || [
-  {id:1, title:"Frontend Developer", company:"MetaTech", location:"Dhaka", salary:"40k-60k", status:"all"},
-  {id:2, title:"Backend Engineer", company:"DevHive", location:"Remote", salary:"50k-70k", status:"all"},
-  {id:3, title:"Data Analyst", company:"DataSoft", location:"Dhaka", salary:"45k-65k", status:"all"},
-  {id:4, title:"Cloud Engineer", company:"CloudNet", location:"Singapore", salary:"80k-100k", status:"all"},
-  {id:5, title:"UI Designer", company:"Innova", location:"Remote", salary:"30k-40k", status:"all"},
-  {id:6, title:"Security Analyst", company:"CyberX", location:"Dhaka", salary:"60k-90k", status:"all"},
-  {id:7, title:"React Developer", company:"Softvence", location:"Remote", salary:"55k-75k", status:"all"},
-  {id:8, title:"QA Engineer", company:"NextGen", location:"Dhaka", salary:"35k-50k", status:"all"}
+  {id:1,title:"Frontend Developer",company:"MetaTech",location:"Dhaka",salary:"40k-60k",description:"Build responsive UI using React.",status:"all"},
+  {id:2,title:"Backend Engineer",company:"DevHive",location:"Remote",salary:"50k-70k",description:"Develop REST APIs and databases.",status:"all"},
+  {id:3,title:"Data Analyst",company:"DataSoft",location:"Dhaka",salary:"45k-65k",description:"Analyze business data and insights.",status:"all"},
+  {id:4,title:"Cloud Engineer",company:"CloudNet",location:"Singapore",salary:"80k-100k",description:"Manage AWS infrastructure.",status:"all"},
+  {id:5,title:"UI Designer",company:"Innova",location:"Remote",salary:"30k-40k",description:"Design modern app interfaces.",status:"all"},
+  {id:6,title:"Security Analyst",company:"CyberX",location:"Dhaka",salary:"60k-90k",description:"Ensure system security.",status:"all"},
+  {id:7,title:"React Developer",company:"Softvence",location:"Remote",salary:"55k-75k",description:"Build scalable SPA apps.",status:"all"},
+  {id:8,title:"QA Engineer",company:"NextGen",location:"Dhaka",salary:"35k-50k",description:"Test web applications.",status:"all"}
 ];
 
 let currentTab="all";
@@ -36,8 +36,9 @@ function renderJobs(){
     container.innerHTML+=`
       <div class="job-card">
         <h3>${job.title}</h3>
-        <p>${job.company} • ${job.location}</p>
-        <p>${job.salary}</p>
+        <p class="company">${job.company} • ${job.location}</p>
+        <p class="salary">${job.salary}</p>
+        <p class="desc">${job.description}</p>
 
         ${job.status==="interview"?'<span class="badge i">Interview</span>':""}
         ${job.status==="rejected"?'<span class="badge r">Rejected</span>':""}
