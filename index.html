@@ -2,61 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Job Application Tracker</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-<div class="container">
+  <!-- ===== DASHBOARD ===== -->
+  <header class="dashboard">
+    <h1>Job Application Tracker</h1>
 
-  <h1>Job Application Tracker</h1>
+    <div class="stats">
+      <div class="card">
+        <h3>Total</h3>
+        <p id="totalCount">0</p>
+      </div>
 
-  <!-- Dashboard -->
-  <section class="dashboard">
-    <div class="dash applied">
-      <p>Applied</p>
-      <h2 id="allCount">0</h2>
+      <div class="card">
+        <h3>Interview</h3>
+        <p id="interviewCount">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Rejected</h3>
+        <p id="rejectedCount">0</p>
+      </div>
     </div>
+  </header>
 
-    <div class="dash interview">
-      <p>Interview</p>
-      <h2 id="interviewCount">0</h2>
-    </div>
-
-    <div class="dash rejected">
-      <p>Rejected</p>
-      <h2 id="rejectedCount">0</h2>
-    </div>
-  </section>
-
-  <!-- Jobs Section -->
-  <section class="jobs">
+  <!-- ===== JOB SECTION ===== -->
+  <section class="jobs-section">
 
     <div class="jobs-header">
       <h2>Available Jobs</h2>
-      <span id="tabCount"></span>
+      <span id="tabCount">0 jobs</span>
     </div>
 
+    <!-- Tabs -->
     <div class="tabs">
-      <button class="active" onclick="switchTab('all', this)">All</button>
-      <button onclick="switchTab('interview', this)">Interview</button>
-      <button onclick="switchTab('rejected', this)">Rejected</button>
+      <button class="tab active" data-tab="all">All</button>
+      <button class="tab" data-tab="interview">Interview</button>
+      <button class="tab" data-tab="rejected">Rejected</button>
     </div>
 
-    <div id="jobContainer" class="job-container"></div>
+    <!-- Job cards will be inserted here by JavaScript -->
+    <div id="jobList" class="job-list"></div>
 
-    <!-- Empty State -->
-    <div id="emptyState" class="empty hidden">
-      <img src="jobs.png" class="empty-img">
+    <!-- Empty state -->
+    <div id="emptyState" class="empty">
       <h3>No jobs available</h3>
-      <p>There are no jobs in this section right now</p>
+      <p>Check back later for new opportunities.</p>
     </div>
 
   </section>
 
-</div>
-
-<script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
